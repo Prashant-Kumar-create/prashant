@@ -19,6 +19,12 @@
       "equity": 10000,
       "position_status": "SELL",
       "current_price": 5098.7998046875
+    },
+    {
+      "timestamp": "2026-01-30T15:41:15.274817",
+      "equity": 10000,
+      "position_status": "SELL",
+      "current_price": 5078.39990234375
     }
   ],
   "position": {
@@ -29,5 +35,5 @@
     "position_size": 1.5628483390648342,
     "entry_time": "2026-01-30T08:49:20.763890"
   },
-  "last_update": "2026-01-30T14:39:56.804132"
+  "last_update": "2026-01-30T15:41:15.274833"
 }
