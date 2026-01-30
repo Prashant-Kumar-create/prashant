@@ -1,57 +1,37 @@
-name: Gold Trading Bot (Auto PR)
+name: Gold Trading Bot
 
 on:
   schedule:
-    - cron: "0 * * * *"   # runs every hour
-  workflow_dispatch:
+    - cron: '0 * * * *'  # Run every hour at minute 0
+  workflow_dispatch:  # Allow manual trigger
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
-  run-bot:
+  trade:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install dependencies
-        run: |
-          pip install pandas numpy yfinance
-
-      - name: Run Gold Trading Bot
-        run: |
-          python gold_trading_bot_github.py
-
-      - name: Commit trading data
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "action@github.com"
-
-          git checkout -B auto/trading-data-update
-          git add trading_data.json
-          git commit -m "Auto update trading data ($(date -u))" || echo "No changes"
-
-      - name: Create or Update PR
-        uses: peter-evans/create-pull-request@v6
-        with:
-          branch: auto/trading-data-update
-          title: "🤖 Automated trading data update"
-          body: |
-            This PR was generated automatically by the Gold Trading Bot.
-
-            - Strategy: EMA + RSI + ADX
-            - Timeframe: 1H
-            - Instrument: Gold Futures (GC=F)
-            - Timestamp: $(date -u)
-          base: main
-
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        pip install pandas numpy yfinance
+        
+    - name: Run trading bot
+      run: |
+        python gold_trading_bot_github.py
+        
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action Bot"
+        git add trading_data.json
+        git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto update: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" && git push)
