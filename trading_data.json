@@ -1,5 +1,5 @@
 {
-  "capital": 10723.458664146308,
+  "capital": 11174.970757823192,
   "trades": [
     {
       "entry_time": "2026-01-30T08:49:20.763890",
@@ -224,6 +224,22 @@
       "capital_before": 11083.122767253053,
       "capital_after": 10723.458664146308,
       "exit_reason": "STOP_LOSS"
+    },
+    {
+      "entry_time": "2026-02-01T22:31:36.827009",
+      "exit_time": "2026-02-01T23:31:28.864435",
+      "trade_type": "SELL",
+      "entry_price": 5067.5,
+      "exit_price": 4747.89990234375,
+      "stop_loss": 5219.310703822544,
+      "take_profit": 4763.87859235491,
+      "position_size": 1.412740787590478,
+      "pnl": 451.5120936768843,
+      "pnl_pct": 4.210508081562406,
+      "result": "WIN",
+      "capital_before": 10723.458664146308,
+      "capital_after": 11174.970757823192,
+      "exit_reason": "TAKE_PROFIT"
     }
   ],
   "equity_history": [
@@ -532,15 +548,21 @@
       "equity": 11083.122767253053,
       "position_status": "SELL",
       "current_price": 5067.5
+    },
+    {
+      "timestamp": "2026-02-01T23:31:28.864420",
+      "equity": 10723.458664146308,
+      "position_status": "SELL",
+      "current_price": 4747.89990234375
     }
   ],
   "position": {
     "trade_type": "SELL",
-    "entry_price": 5067.5,
-    "stop_loss": 5219.310703822544,
-    "take_profit": 4763.87859235491,
-    "position_size": 1.412740787590478,
-    "entry_time": "2026-02-01T22:31:36.827009"
+    "entry_price": 4747.89990234375,
+    "stop_loss": 4942.064156668527,
+    "take_profit": 4359.571393694197,
+    "position_size": 1.1510842504646501,
+    "entry_time": "2026-02-01T23:31:28.864572"
   },
-  "last_update": "2026-02-01T22:31:36.827030"
+  "last_update": "2026-02-01T23:31:28.864594"
 }
