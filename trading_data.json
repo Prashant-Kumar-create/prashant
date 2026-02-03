@@ -792,8 +792,21 @@
       "equity": 11564.261387030456,
       "position_status": "FLAT",
       "current_price": 4979.10009765625
+    },
+    {
+      "timestamp": "2026-02-03T22:35:47.423095",
+      "equity": 11564.261387030456,
+      "position_status": "FLAT",
+      "current_price": 4970.5
     }
   ],
-  "position": null,
-  "last_update": "2026-02-03T21:40:52.558470"
+  "position": {
+    "trade_type": "BUY",
+    "entry_price": 4970.5,
+    "stop_loss": 4894.45002092634,
+    "take_profit": 5122.599958147322,
+    "position_size": 3.041226711142042,
+    "entry_time": "2026-02-03T22:35:47.423202"
+  },
+  "last_update": "2026-02-03T22:35:47.423224"
 }
