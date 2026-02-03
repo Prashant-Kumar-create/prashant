@@ -726,8 +726,14 @@
       "equity": 11564.261387030456,
       "position_status": "FLAT",
       "current_price": 4953.5
+    },
+    {
+      "timestamp": "2026-02-03T08:47:03.868573",
+      "equity": 11564.261387030456,
+      "position_status": "FLAT",
+      "current_price": 4956.5
     }
   ],
   "position": null,
-  "last_update": "2026-02-03T07:50:14.224608"
+  "last_update": "2026-02-03T08:47:03.868698"
 }
