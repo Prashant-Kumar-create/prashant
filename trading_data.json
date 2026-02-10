@@ -936,6 +936,12 @@
       "equity": 11564.261387030456,
       "position_status": "BUY",
       "current_price": 5069.5
+    },
+    {
+      "timestamp": "2026-02-10T13:41:06.719915",
+      "equity": 11564.261387030456,
+      "position_status": "BUY",
+      "current_price": 5066.7998046875
     }
   ],
   "position": {
@@ -946,5 +952,5 @@
     "position_size": 3.041226711142042,
     "entry_time": "2026-02-03T22:35:47.423202"
   },
-  "last_update": "2026-02-10T11:55:58.530145"
+  "last_update": "2026-02-10T13:41:06.719930"
 }
